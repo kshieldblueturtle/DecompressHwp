@@ -44,6 +44,8 @@ version: 5.0.1.7
 xmltemplate_storage: 0
 ```
 
+<br/>
+
 # 요약 정보
 제목, 
 
@@ -64,6 +66,8 @@ Date: 2010년 7월 2일 금요일 오후 12:36:13
 Number of paragraphs: 26
 ```
 
+<br/>
+
 # 스트림 목록 출력
 ```
 (pyhwp)$ hwp5proc ls ./samples/sample-5017.hwp
@@ -80,6 +84,8 @@ PrvText
 Scripts/DefaultJScript
 Scripts/JScriptVersion
 ```
+
+<br/>
 
 # 구조 내용 출력
 ```
@@ -100,8 +106,22 @@ Scripts/JScriptVersion
   "level": 0, 
 ```
 
+<br/>
+
 # 스트림 내용 출력
 ```
 (pyhwp)$ hwp5proc cat ./samples/sample-5017.hwp BinData/BIN0002.jpg
 파일 내용이 길어 생략..
+```
+
+<br/>
+
+# hwp모든 구조를 파일로 추출
+```
+(pyhwp)$ hwp5proc unpack ./samples/sample-5017.hwp
+(pyhwp)$ cd sample-5017/
+(pyhwp)$ ls
+_05HwpSummaryInformation  BodyText  DocOptions  PrvImage  Scripts
+BinData                   DocInfo   FileHeader  PrvText
+
 ```
